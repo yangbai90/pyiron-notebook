@@ -31,3 +31,24 @@ and then put the path of your pyiron-continuum into your `PYTHONPATH`, for insta
 export pyiron_continuum=my-path-to-pyiron-continuum
 export PYTHONPATH=$PYTHONPATH:$pyiron_continuum
 ```
+
+# Issues
+
+## 1
+```
+ModuleNotFoundError: No module named 'pyscal'
+```
+solution:
+```
+pip install pybind11
+pip install git+https://github.com/pyscal/pyscal
+```
+## 2
+```
+ImportError: cannot import name 'Structure' from 'pymatgen' (unknown location)
+```
+solution:
+```
+pip install pymatgen==2021.2.16
+```
+
